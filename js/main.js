@@ -100,3 +100,35 @@
 
   cards.forEach(c => observer.observe(c));
 })();
+
+
+/* ------------------------------------------------------------------
+   Menú hamburguesa (solo visible en móvil, vía CSS)
+   ------------------------------------------------------------------ */
+(function mobileNav(){
+  const toggle = document.querySelector('.nav__toggle');
+  const links = document.getElementById('nav-links');
+  if (!toggle || !links) return;
+
+  function closeMenu(){
+    links.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+  function openMenu(){
+    links.classList.add('is-open');
+    toggle.setAttribute('aria-expanded', 'true');
+  }
+
+  toggle.addEventListener('click', () => {
+    const isOpen = links.classList.contains('is-open');
+    isOpen ? closeMenu() : openMenu();
+  });
+
+  // al clicar un enlace del menú, se cierra (útil en la misma página, p.ej. #contacte)
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+  // si la ventana vuelve a tamaño de escritorio, nos aseguramos de que quede cerrado/reseteado
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 720) closeMenu();
+  });
+})();
