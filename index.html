@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Judit Alcázar García — Portfolio</title>
+<meta name="description" content="Portfolio de diseño gráfico y desarrollo web de Judit Alcázar García.">
+
+<!-- ============================================
+     TIPOGRAFÍAS (Google Fonts)
+     - Space Grotesk  -> titulares
+     - Inter          -> texto de cuerpo
+     - Caveat         -> anotaciones "a mano" (etiquetas, números)
+     ============================================ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Lienzo del trazo que sigue el cursor (lo dibuja el JS) -->
+<canvas id="ink-canvas"></canvas>
+
+<!-- ============================================
+     NAVEGACIÓN
+     ============================================ -->
+<header class="nav">
+  <a href="#top" class="nav__brand">Judit Alcázar</a>
+  <nav class="nav__links">
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#webs">Webs</a>
+    <a href="#logotips">Logotipos</a>
+    <a href="#editorial">Editorial</a>
+    <a href="#altres">Packaging y flyers</a>
+    <a href="#contacte" class="nav__cta">Contacto</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ============================================
+       HERO
+       El texto de abajo ("hero__desc") es el que
+       habla de tu formación. Edítalo aquí.
+       ============================================ -->
+  <section class="hero">
+    <h1 class="hero__title">
+      Judit Alcázar García
+    </h1>
+    <p class="hero__role">Diseño gráfico <span class="hero__amp">&amp;</span> desarrollo web</p>
+    <p class="hero__desc">
+      Diseño identidades visuales, las llevo a webs en WordPress y
+      las maqueto en papel cuando hace falta — de principio a fin,
+      para clientes de sectores muy distintos.
+    </p>
+    <a href="#sobre-mi" class="hero__scroll">
+      <span>desliza</span>
+      <svg width="14" height="22" viewBox="0 0 14 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7 1V21M7 21L1 15M7 21L13 15" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </section>
+
+  <!-- ============================================
+       SOBRE MÍ
+       ============================================ -->
+  <section id="sobre-mi" class="about">
+    <p class="section-tag">— 01 / Sobre mí</p>
+    <div class="about__grid">
+      <p class="about__lead">
+        Diseño marcas y hago que funcionen de verdad: desde el
+        primer boceto de un logotipo hasta la página web que lo
+        acoge.
+      </p>
+      <div class="about__body">
+        <p>
+          He trabajado en <strong>Empiezapori</strong>, un estudio de
+          Sant Just Desvern especializado en diseño gráfico,
+          desarrollo web y comunicación digital. Allí diseñé para
+          clientes de sectores muy distintos: reformas,
+          restauración, derecho, interiorismo, turismo, entidades
+          sociales y alimentación, entre otros.
+        </p>
+        <p>
+          Me gusta la parte donde el diseño y el código se tocan —
+          construir una identidad visual y verla después convertida
+          en una web que alguien usa de verdad.
+        </p>
+        <ul class="about__skills">
+          <li>Identidad visual y branding</li>
+          <li>WordPress + Kadence</li>
+          <li>SEO on-page</li>
+          <li>Diseño editorial</li>
+          <li>Packaging</li>
+          <li>HTML / CSS</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       WEBS
+       Las tarjetas se generan solas a partir de
+       js/projects.js (busca category: "webs").
+       ============================================ -->
+  <section id="webs" class="work">
+    <p class="section-tag">— 02 / Webs</p>
+    <h2 class="section-title">Diseño y desarrollo web</h2>
+    <div class="grid" id="grid-webs"></div>
+  </section>
+
+  <!-- ============================================
+       LOGOTIPOS
+       ============================================ -->
+  <section id="logotips" class="work work--dark">
+    <p class="section-tag">— 03 / Logotipos</p>
+    <h2 class="section-title">Identidad y branding</h2>
+    <div class="grid grid--logos" id="grid-logos"></div>
+  </section>
+
+  <!-- ============================================
+       EDITORIAL
+       ============================================ -->
+  <section id="editorial" class="work">
+    <p class="section-tag">— 04 / Editorial</p>
+    <h2 class="section-title">Catálogos y publicaciones</h2>
+    <div class="grid" id="grid-editorial"></div>
+  </section>
+
+  <!-- ============================================
+       PACKAGING Y FLYERS
+       ============================================ -->
+  <section id="altres" class="work work--dark">
+    <p class="section-tag">— 05 / Packaging y flyers</p>
+    <h2 class="section-title">Otros proyectos</h2>
+    <div class="grid grid--wide" id="grid-altres"></div>
+  </section>
+
+  <!-- ============================================
+       CONTACTO
+       ============================================ -->
+  <footer id="contacte" class="contact">
+    <p class="section-tag">— 06 / Contacto</p>
+    <h2 class="contact__title">Hablemos de tu próximo proyecto.</h2>
+    <a href="mailto:juditalcazargarcia@gmail.com" class="contact__email">juditalcazargarcia@gmail.com</a>
+    <div class="contact__links">
+      <a href="https://www.linkedin.com/in/ailurus21" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.instagram.com/judit.alcazar.design" target="_blank" rel="noopener">Instagram</a>
+    </div>
+    <p class="contact__foot">Judit Alcázar García — Portfolio</p>
+  </footer>
+
+</main>
+
+<!-- El orden importa: primero los datos, luego quien los pinta -->
+<script src="js/projects.js"></script>
+<script src="js/render-index.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

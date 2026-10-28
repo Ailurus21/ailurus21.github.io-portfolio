@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proyecto — Judit Alcázar García</title>
+<meta name="description" content="Portfolio de diseño gráfico y desarrollo web de Judit Alcázar García.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<canvas id="ink-canvas"></canvas>
+
+<header class="nav">
+  <a href="index.html" class="nav__brand">Judit Alcázar</a>
+  <nav class="nav__links">
+    <a href="index.html#webs">Webs</a>
+    <a href="index.html#logotips">Logotipos</a>
+    <a href="index.html#editorial">Editorial</a>
+    <a href="index.html#altres">Packaging y flyers</a>
+    <a href="index.html#contacte" class="nav__cta">Contacto</a>
+  </nav>
+</header>
+
+<main>
+  <!-- ============================================
+       Todo lo que hay aquí dentro lo rellena
+       js/project-page.js a partir del "slug" que
+       llega por la URL (project.html?slug=xxx)
+       ============================================ -->
+  <section class="project" id="project-root"></section>
+
+  <!-- proyecto anterior / siguiente -->
+  <nav class="project-nav" id="project-nav"></nav>
+
+  <footer class="contact contact--small">
+    <a href="index.html" class="back-link">← Volver al portfolio</a>
+  </footer>
+</main>
+
+<script src="js/projects.js"></script>
+<script src="js/project-page.js"></script>
+<script src="js/gallery-zoom.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
